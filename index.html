@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevser Uzdilli — Edebi Eserler Cildi & İncelemeler</title>
+    <meta name="description" content="Kevser Uzdilli — Yazar, Edebi Araştırmacı & Eleştirmen. İngiliz Dili ve Edebiyatı, Modernist Roman ve Kültür-Sanat Tahlilleri.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Gerçekçi Kağıt Sayfa Çevirme Fizik Motoru -->
+    <script src="page-flip.browser.js"></script>
+</head>
+<body class="desk-room">
+
+<!-- Arka Plan Yumuşak Kütüphane Ambiyansı ve Parçacıklar -->
+<div class="library-ambient-glow" aria-hidden="true"></div>
+<canvas id="ambient-dust-canvas" class="dust-canvas" aria-hidden="true"></canvas>
+
+<!-- Minimal Masa Kontrolleri -->
+<header class="minimal-controls">
+    <button class="control-btn" id="sound-toggle" title="Sayfa Sesi Aç/Kapat" aria-label="Sesi Aç/Kapat">
+        <i class="fa-solid fa-volume-high"></i>
+    </button>
+    <a href="https://www.soylentidergi.com/author/kevseruzdilli/" target="_blank" rel="noopener noreferrer" class="control-pill" title="Söylenti Dergi Yazar Profili">
+        <i class="fa-solid fa-feather-pointed"></i> Söylenti Dergi
+    </a>
+    <a href="https://www.tiktok.com/@liamizsh" target="_blank" rel="noopener noreferrer" class="control-pill tt-pill" title="TikTok @liamizsh">
+        <i class="fa-brands fa-tiktok"></i> @liamizsh
+    </a>
+</header>
+
+<!-- ==============================================================
+     FİZİKSEL GERÇEKÇİ KİTAP
+     Sayfaları köşesinden tutup yavaşça bükerek çevirebilirsiniz.
+     ============================================================== -->
+<main class="book-viewport">
+    <div class="physical-book-container">
+        
+        <div id="book" class="flip-book">
+            
+            <!-- SAYFA 0: ÖN SERT DERİ CİLT KAPAĞI -->
+            <div class="book-page cover-page" data-density="hard">
+                <div class="page-inner cover-leather-plate">
+                    <div class="cover-frame-border">
+                        <div class="cover-crest">❦</div>
+                        <span class="cover-author-title">Kevser Uzdilli</span>
+                        <h1 class="cover-book-title">Kelimelerin<br>İz Düşümü</h1>
+                        <div class="cover-ornament">
+                            <span class="ornament-line"></span>
+                            <span class="ornament-diamond">✦</span>
+                            <span class="ornament-line"></span>
+                        </div>
+                        <p class="cover-sub-caption">Edebi İncelemeler • Modernist Anlatı • Kültür-Sanat Eleştirisi</p>
+                        <div class="cover-footer-badge">
+                            <span class="badge-publisher">Söylenti Dergi Cildi</span>
+                            <span class="badge-year">MMXXVI</span>
+                        </div>
+                    </div>
+                    <div class="peel-corner-hint">
+                        <span class="corner-guide"><i class="fa-solid fa-hand-pointer"></i> Köşeden Tutup Sürükleyin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 1: YAZAR PORTRESİ & AKADEMİK KÜNYE (SOL İÇ SAYFA) -->
+            <div class="book-page paper-page left-page">
+                <div class="page-inner">
+                    <div class="page-content">
+                        <div class="author-frame-box">
+                            <div class="portrait-oval-ring">
+                                <img src="kk.jpeg" alt="Kevser Uzdilli" class="author-img" id="author-photo">
+                            </div>
+                            <div class="portrait-ribbon">Yazar & Edebi Tahlilci</div>
+                        </div>
+                        
+                        <div class="author-name-block">
+                            <h2>Kevser Uzdilli</h2>
+                            <span class="author-discipline">İngiliz Dili ve Edebiyatı Araştırmacısı</span>
+                            <span class="author-role"><i class="fa-solid fa-feather-pointed"></i> Söylenti Dergi Düzenli Yazarı</span>
+                        </div>
+
+                        <div class="author-credentials-list">
+                            <div class="cred-item">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <div>
+                                    <strong>İngiliz Dili & Edebiyatı</strong>
+                                    <span>Anglo-Amerikan kanonu, modern anlatı teknikleri ve metin analizi.</span>
+                                </div>
+                            </div>
+                            <div class="cred-item">
+                                <i class="fa-solid fa-newspaper"></i>
+                                <div>
+                                    <strong>Söylenti Dergi Akademi</strong>
+                                    <span>Modernist roman, bilinç akışı ve felsefi edebiyat tahlilleri.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="folio-num">1</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 2: EPİGRAF & EDEBİ MANİFESTO (SAĞ İÇ SAYFA) -->
+            <div class="book-page paper-page right-page">
+                <div class="page-inner">
+                    <div class="page-content">
+                        <div class="section-header-block">
+                            <span class="chapter-marker">— Giriş & Manifesto</span>
+                            <h2 class="section-heading">Kelimelerin İz Düşümü</h2>
+                        </div>
+                        
+                        <p class="prose-p lead-p">
+                            "Metinler yalnızca hikâyeleri aktaran araçlar değil; yazarın bilincinde açılan çatlakları, zamanın ruhumuzdaki izlerini ve susulan hakikatleri ifşa eden sessiz tapınaklardır."
+                        </p>
+
+                        <div class="manifesto-body-text">
+                            <p class="prose-p">
+                                Edebi yazarlık; kelimelerin arkasındaki saklı mimariyi çözmek, anlatının görünmeyen dikiş izlerini takip etmek ve metinleri sadece bir okur gibi değil, bir arkeolog gibi kazmaktır.
+                            </p>
+                            <p class="prose-p">
+                                Bu cilt; modernist romanın fısıltılarını, bilinç akışının labirentlerini, zamanın öznel algılanışını ve kadın kimliğinin edebiyattaki varoluş mücadelesini bir araya getiriyor.
+                            </p>
+                        </div>
+
+                        <div class="quiet-quote-box">
+                            <div class="quote-icon-mark"><i class="fa-solid fa-quote-left"></i></div>
+                            <blockquote id="quote-text">
+                                "Bir kadının para kazanması ve kendine ait bir odası olması gerekir; eğer kurgu yazacaksa."
+                            </blockquote>
+                            <cite id="quote-by">— Virginia Woolf</cite>
+                        </div>
+
+                        <div class="quote-switch-row">
+                            <button class="mini-quote-btn" id="next-quote" title="Başka bir edebi alıntı göster">
+                                <i class="fa-solid fa-rotate"></i> Alıntıyı Değiştir
+                            </button>
+                        </div>
+
+                        <div class="folio-num">2</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 3: BÖLÜM I - ELEŞTİRMEN & YAZAR PROFİLİ (SOL SAYFA) -->
+            <div class="book-page paper-page left-page">
+                <div class="page-inner">
+                    <div class="page-content">
+                        <div class="section-header-block">
+                            <span class="chapter-marker">— Bölüm I • Profil</span>
+                            <h2 class="section-heading">Edebiyatın Çözümleyici Gözü</h2>
+                        </div>
+
+                        <p class="drop-text">
+                            <span class="initial-cap">E</span>debiyatı yalnızca olay örgülerinden, kronolojik akışlardan ve kurgusal kahramanların eylemlerinden ibaret görmüyorum. Metinlerin satır aralarında saklanan felsefi krizleri, dönemin toplumsal kırılmalarını ve insan bilincinin zaman içindeki akışkanlığını irdeliyorum.
+                        </p>
+
+                        <p class="prose-p">
+                            <strong>İngiliz Dili ve Edebiyatı</strong> akademik formasyonum; hem Anglo-Amerikan edebiyat kanonuna hem de dünya klasiklerine kuramsal, yapıbozumcu ve eleştirel bir mercekle yaklaşmamı sağlıyor. Metnin biçimsel tercihlerinin —anlatıcı perspektifi, iç monolog, zaman kırılmaları— metnin sunduğu felsefeyi nasıl inşa ettiğini araştırıyorum.
+                        </p>
+
+                        <p class="prose-p">
+                            <strong>Söylenti Dergi</strong> çatısı altında yayımladığım makalelerde; özellikle 20. yüzyıl başı modernist devrimini, Virginia Woolf'un lirik ve felsefi anlatı evrenini, varoluşsal yalnızlığı ve edebiyatın insan bilincini dönüştürme gücünü okurlarla buluşturuyorum.
+                        </p>
+
+                        <div class="folio-num">3</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 4: AKADEMİK & EDEBİ YETKİNLİKLER (SAĞ SAYFA) -->
+            <div class="book-page paper-page right-page">
+                <div class="page-inner">
+                    <div class="page-content">
+                        <div class="section-header-block">
+                            <span class="chapter-marker">— Formasyon</span>
+                            <h2 class="section-heading">Akademik & Edebi Odak</h2>
+                        </div>
+
+                        <div class="academic-list">
+                            <div class="academic-item">
+                                <div class="academic-item-header">
+                                    <span class="academic-tag">Akademi</span>
+                                    <h4>İngiliz Dili ve Edebiyatı</h4>
+                                </div>
+                                <p>Kuramsal analiz, metinlerarasılık, edebi eleştiri yöntemleri, Viktoryen dönemden modernizme geçiş ve kanonik metinlerin çözümlenmesi.</p>
+                            </div>
+
+                            <div class="academic-item">
+                                <div class="academic-item-header">
+                                    <span class="academic-tag">Yazarlık</span>
+                                    <h4>Söylenti Dergi Düzenli Yazarı</h4>
+                                </div>
+                                <p>Akademi kategorisinde düzenli yayımlanan edebi tahlil, yazar monografileri ve karşılaştırmalı edebiyat makaleleri.</p>
+                            </div>
+
+                            <div class="academic-item">
+                                <div class="academic-item-header">
+                                    <span class="academic-tag">Kuram</span>
+                                    <h4>Modernizm & Bilinç Akışı</h4>
+                                </div>
+                                <p>Öznel zaman algısı (Bergsonyen süre), iç monologlar, parça-bütün ilişkisi ve 20. yüzyıl modernist anlatı teknikleri.</p>
+                            </div>
+
+                            <div class="academic-item">
+                                <div class="academic-item-header">
+                                    <span class="academic-tag">Eleştiri</span>
+                                    <h4>Kültür-Sanat Metin Yazarlığı</h4>
+                                </div>
+                                <p>Kültürel platformlar ve edebi mecmualar için üslup sahibi, entelektüel derinliğe ve araştırma disiplinine dayanan özgün metinler.</p>
+                            </div>
+                        </div>
+
+                        <div class="folio-num">4</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 5: MAKALE 1 - VIRGINIA WOOLF DERİNLEMESİNE (SOL SAYFA) -->
+            <div class="book-page paper-page left-page">
+                <div class="page-inner">
+                    <div class="page-content">
+                        <div class="section-header-block">
+                            <span class="chapter-marker">— Bölüm II • Makaleler</span>
+                            <h2 class="section-heading">Virginia Woolf Eserlerinde 3 Farklı Tema</h2>
+                            <span class="sub-notice"><i class="fa-solid fa-feather-pointed"></i> Söylenti Dergi • Akademi Kategorisi</span>
+                        </div>
+
+                        <div class="article-rich-breakdown">
+                            <p class="prose-p">
+                                Modernist romanın öncülerinden Virginia Woolf'un başyapıtlarında kurgulanan derin felsefi izleklerin kuramsal tahlili:
+                            </p>
+
+                            <div class="theme-mini-card">
+                                <strong>1. Varoluşsal Yalnızlık ve İletişimsizlik</strong>
+                                <p>Clarissa Dalloway'in kalabalıklar içindeki derin tecrit hali; insanın toplumsal rolleri ile kendi içsel yalnızlığı arasındaki uçurum.</p>
+                            </div>
+
+                            <div class="theme-mini-card">
+                                <strong>2. Akışkan Zaman Algısı ve Hafıza</strong>
+                                <p>Saatlerin lineer tik-taklarının ötesinde, geçmiş ve şimdinin zihinde iç içe geçtiği 'Bergsonyen süre' (durée) ve 'var olma anları'.</p>
+                            </div>
+
+                            <div class="theme-mini-card">
+                                <strong>3. Kadın Kimliği ve Kendine Ait Bir Oda</strong>
+                                <p>Ataerkil kanona karşı kadının entelektüel ve ekonomik bağımsızlık alanı; edebi yaratıcılığın özgürleşme mücadelesi.</p>
+                            </div>
+
+                            <div class="entry-links" style="margin-top: 10px;">
+                                <a href="https://www.soylentidergi.com/author/kevseruzdilli/" target="_blank" rel="noopener noreferrer" class="read-btn">
+                                    Söylenti'de Oku <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <button class="detail-btn" onclick="openArticleModal(1)">
+                                    <i class="fa-solid fa-circle-info"></i> İnceleme Notu
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="folio-num">5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 6: MAKALE 2 & DERGİ YAZAR PORTALI (SAĞ SAYFA) -->
+            <div class="book-page paper-page right-page">
+                <div class="page-inner">
+                    <div class="page-content">
+                        <div class="section-header-block">
+                            <span class="chapter-marker">— Karşılaştırmalı Edebiyat</span>
+                            <h2 class="section-heading">3 Farklı Yazardan Arkadaşlık Teması</h2>
+                            <span class="sub-notice"><i class="fa-solid fa-feather-pointed"></i> Söylenti Dergi • Edebi İnceleme</span>
+                        </div>
+
+                        <div class="article-rich-breakdown">
+                            <p class="prose-p">
+                                Dünya edebiyatının seçkin kalemlerinin eserleri üzerinden dostluk, vefa ve sadakat olgusuna metinlerarası ve felsefi bir bakış:
+                            </p>
+
+                            <div class="theme-mini-card">
+                                <strong>• İki Zihnin Sessiz Sözleşmesi</strong>
+                                <p>Dostluğun yalnızca biyografik bir bağ değil, varoluşsal yabancılaşmaya karşı inşa edilen en güçlü sığınak oluşu.</p>
+                            </div>
+
+                            <div class="theme-mini-card">
+                                <strong>• Sadakat ve Ayrılık Sınavları</strong>
+                                <p>Farklı edebi geleneklerde kahramanların dostluk sınavları üzerinden insanın etik ve duygusal dönüşümünün irdelenmesi.</p>
+                            </div>
+
+                            <div class="entry-links" style="margin-top: 8px;">
+                                <a href="https://www.soylentidergi.com/author/kevseruzdilli/" target="_blank" rel="noopener noreferrer" class="read-btn">
+                                    Söylenti'de Oku <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <button class="detail-btn" onclick="openArticleModal(2)">
+                                    <i class="fa-solid fa-circle-info"></i> İnceleme Notu
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="author-dergi-card">
+                            <div class="dergi-crest"><i class="fa-solid fa-feather"></i></div>
+                            <h4>Söylenti Dergi Yazar Portalı</h4>
+                            <p>Tüm yeni araştırmalarım, tahlil ve eleştirilerim düzenli olarak derginin dijital sayfalarında yayımlanmaktadır.</p>
+                            <a href="https://www.soylentidergi.com/author/kevseruzdilli/" target="_blank" rel="noopener noreferrer" class="dergi-link-line">
+                                Yazar Sayfasını Ziyaret Et <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="folio-num">6</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 7: BÖLÜM III - EDEBİ ODAK ALANLARI I & II (SOL SAYFA) -->
+            <div class="book-page paper-page left-page">
+                <div class="page-inner">
+                    <div class="page-content">
+                        <div class="section-header-block">
+                            <span class="chapter-marker">— Bölüm III • Temalar</span>
+                            <h2 class="section-heading">Edebi Odak Alanları</h2>
+                        </div>
+
+                        <div class="topic-row">
+                            <div class="topic-head">
+                                <span class="topic-num">I.</span>
+                                <h3>Modernist Roman & Bilinç Akışı</h3>
+                            </div>
+                            <p>Virginia Woolf, James Joyce ve 20. yüzyıl başı edebiyatında iç monologlar, zamanın lineer olmayıp öznel bilince göre kırılması ve iç seslerin anlatısal inşası. Karakterlerin zihnindeki çağrışımlar zincirinin metne dönüşümü.</p>
+                        </div>
+
+                        <div class="topic-row">
+                            <div class="topic-head">
+                                <span class="topic-num">II.</span>
+                                <h3>Kadın Kimliği & Edebi Temsil</h3>
+                            </div>
+                            <p>Kadın yazarların edebi kanondaki yeri, mekânla kurdukları varoluşsal bağ, bağımsızlık arayışları ve feminist edebiyat kuramlarının metne yansıması. Kadın anlatıcıların sessizlik ve dille kurduğu çok katmanlı ilişki.</p>
+                        </div>
+
+                        <div class="topic-row">
+                            <div class="topic-head">
+                                <span class="topic-num">III.</span>
+                                <h3>Zaman, Hafıza & Varoluş</h3>
+                            </div>
+                            <p>Edebiyatta geçmişin hiçbir zaman ölmediği, hatıraların şimdiki zamanı sürekli yeniden inşa ettiği felsefi zemin; yitirilen zamanın peşinde insan ruhunun arayışları.</p>
+                        </div>
+
+                        <div class="folio-num">7</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 8: EDEBİ ODAK ALANLARI IV & V + EDEBİ SÖZLÜK (SAĞ SAYFA) -->
+            <div class="book-page paper-page right-page">
+                <div class="page-inner">
+                    <div class="page-content">
+                        <div class="topic-row">
+                            <div class="topic-head">
+                                <span class="topic-num">IV.</span>
+                                <h3>Karşılaştırmalı Edebiyat</h3>
+                            </div>
+                            <p>Farklı edebiyat coğrafyalarında arkadaşlık, yabancılaşma, hafıza ve kayıp gibi evrensel izleklerin yazarlarca nasıl yeniden üretildiğinin karşılaştırmalı analizi.</p>
+                        </div>
+
+                        <div class="topic-row">
+                            <div class="topic-head">
+                                <span class="topic-num">V.</span>
+                                <h3>Kültür-Sanat Metin Yazarlığı</h3>
+                            </div>
+                            <p>Kültürel platformlar, sanat mecmuaları ve dijital dergiler için analitik derinliği üslup zarafetiyle birleştiren deneme ve tahliller.</p>
+                        </div>
+
+                        <div class="literary-micro-glossary">
+                            <span class="glossary-title"><i class="fa-solid fa-bookmark"></i> Edebi Terimler Notu</span>
+                            <div class="glossary-grid">
+                                <div><strong>Stream of Consciousness:</strong> Bilincin kesintisiz akışı.</div>
+                                <div><strong>Durée:</strong> Öznel, akışkan Bergsonyen zaman.</div>
+                                <div><strong>Intertextuality:</strong> Metinlerarası yankılanma.</div>
+                                <div><strong>Epiphany:</strong> Anlık zihinsel aydınlanma.</div>
+                            </div>
+                        </div>
+
+                        <div class="edebiyat-quote-pill">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <span>"Kelimeler, sessizliğin en asil yankısıdır."</span>
+                        </div>
+
+                        <div class="folio-num">8</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 9: KOLOFON & RESMİ BAĞLANTILAR (SOL SAYFA) -->
+            <div class="book-page paper-page left-page">
+                <div class="page-inner">
+                    <div class="page-content">
+                        <div class="section-header-block">
+                            <span class="chapter-marker">— Kolofon</span>
+                            <h2 class="section-heading">Birlikte Üretelim</h2>
+                        </div>
+
+                        <div class="colophon-seal-group">
+                            <div class="simple-seal-circle">KU</div>
+                            <div>
+                                <strong>Kevser Uzdilli</strong>
+                                <span>Yazar & Lifestyle İçerik Üreticisi</span>
+                            </div>
+                        </div>
+
+                        <div class="clean-links-group">
+                            <a href="https://www.soylentidergi.com/author/kevseruzdilli/" target="_blank" rel="noopener noreferrer" class="clean-link-item">
+                                <div class="link-label"><i class="fa-solid fa-feather"></i> <span>Söylenti Dergi</span></div>
+                                <span class="cli-url">yazar profili ↗</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@liamizsh" target="_blank" rel="noopener noreferrer" class="clean-link-item">
+                                <div class="link-label"><i class="fa-brands fa-tiktok"></i> <span>TikTok Profilim</span></div>
+                                <span class="cli-url">@liamizsh ↗</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/kevser-u-8a6b60372/" target="_blank" rel="noopener noreferrer" class="clean-link-item">
+                                <div class="link-label"><i class="fa-brands fa-linkedin-in"></i> <span>LinkedIn</span></div>
+                                <span class="cli-url">profil ↗</span>
+                            </a>
+                            <div class="clean-link-item email-item">
+                                <div class="link-label"><i class="fa-regular fa-envelope"></i> <span>E-Posta</span></div>
+                                <span class="cli-url" id="email-text">kevseruzdilli@gmail.com</span>
+                                <button class="copy-text-btn" id="copy-email-btn" title="Adresi Kopyala"><i class="fa-regular fa-copy"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="colophon-note">
+                            <p>Edebi yazı davetleri, araştırma projeleri, konuşmalar ve iş birlikleri için doğrudan iletişim kurabilirsiniz.</p>
+                        </div>
+
+                        <div class="folio-num">9</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 10: DOĞRUDAN MESAJ FORMU (SAĞ SAYFA) -->
+            <div class="book-page paper-page right-page">
+                <div class="page-inner">
+                    <div class="page-content">
+                        <div class="section-header-block">
+                            <span class="chapter-marker">— İletişim</span>
+                            <h2 class="section-heading">Mesaj Bırakın</h2>
+                        </div>
+
+                        <form class="clean-form" id="contact-form">
+                            <div class="form-field">
+                                <label for="sender-name">İsminiz</label>
+                                <input type="text" id="sender-name" placeholder="Adınız Soyadınız" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="sender-email">E-Posta Adresiniz</label>
+                                <input type="email" id="sender-email" placeholder="ornek@alanadi.com" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="sender-subject">Konu</label>
+                                <input type="text" id="sender-subject" placeholder="Edebi yazı veya iş birliği" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="sender-message">Mesajınız</label>
+                                <textarea id="sender-message" rows="3" placeholder="Mesajınızı kısaca özetleyin…" required></textarea>
+                            </div>
+
+                            <button type="submit" class="clean-submit-btn">
+                                <i class="fa-regular fa-paper-plane"></i> Mesajı Gönder
+                            </button>
+                            <div id="form-feedback" class="form-feedback-pill" style="display:none;"></div>
+                        </form>
+
+                        <div class="book-close-callout" onclick="window.bookFlip && window.bookFlip.flipNext()">
+                            <div class="bcc-icon"><i class="fa-brands fa-tiktok"></i></div>
+                            <div class="bcc-text">
+                                <span class="bcc-title">Arka Cilt Kapağı (@liamizsh)</span>
+                                <p>Kitabı kapattığınızda arka kapakta TikTok hesabı yer alır.</p>
+                            </div>
+                            <span class="bcc-btn">Kapağa Git <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+
+                        <div class="folio-num">10</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 11: ARKA CİLT KAPAĞI (TIKTOK @liamizsh - SADE VE ASİL TANITIM) -->
+            <div class="book-page cover-page back-cover" data-density="hard">
+                <div class="page-inner cover-leather-plate back-cover-plate">
+                    <div class="cover-frame-border">
+                        <span class="back-cover-tag">ARKA CİLT KAPAĞI</span>
+                        
+                        <div class="tt-monochrome-profile">
+                            <div class="tt-avatar-frame-mono">
+                                <img src="kk.jpeg" alt="Kevser (@liamizsh)" class="tt-mono-img">
+                            </div>
+                            <span class="tt-handle-text">@liamizsh</span>
+                            <span class="tt-niche-text"><i class="fa-brands fa-tiktok"></i> TikTok Resmi Hesabı</span>
+                        </div>
+
+                        <p class="tt-clean-desc">
+                            Yazarlık sayfalarımı kapattığınızda; beni günlük hayatımla takip etmek için TikTok hesabıma davetlisiniz.
+                        </p>
+
+                        <a href="https://www.tiktok.com/@liamizsh" target="_blank" rel="noopener noreferrer" class="btn-clean-tiktok hero-tt-btn">
+                            <i class="fa-brands fa-tiktok"></i> TikTok'ta @liamizsh'i Takip Et ↗
+                        </a>
+
+                        <div class="cover-back-colophon">
+                            <span>Kevser Uzdilli • Cilt Sonu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Alt Sayfa Göstergesi & Ok Tuşları -->
+    <footer class="bottom-page-dock">
+        <button class="dock-arrow" id="dock-prev-btn" title="Önceki Sayfa" aria-label="Önceki Sayfa">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <span class="dock-page-status" id="dock-status">Ön Kapak</span>
+        <button class="dock-arrow" id="dock-next-btn" title="Sonraki Sayfa" aria-label="Sonraki Sayfa">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </footer>
+</main>
+
+<!-- Makale İnceleme Modalı (Sade) -->
+<div class="book-modal-backdrop" id="article-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="book-modal-sheet">
+        <button class="modal-close-btn" id="modal-close" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+        <span class="modal-category-tag" id="modal-category">Akademi</span>
+        <h3 class="modal-title-h3" id="modal-title">Makale Başlığı</h3>
+        
+        <div class="modal-time-row">
+            <span><span id="modal-date">Mart 2026</span> • <span id="modal-time">6 dk</span> • Söylenti Dergi</span>
+        </div>
+
+        <div class="modal-text-block">
+            <p id="modal-summary">Metin özeti...</p>
+        </div>
+
+        <div class="modal-themes-block">
+            <h4>Ele Alınan Temalar:</h4>
+            <ul id="modal-themes-list"></ul>
+        </div>
+
+        <div class="modal-button-row">
+            <a href="#" id="modal-read-link" target="_blank" rel="noopener noreferrer" class="modal-primary-btn">
+                Söylenti Dergi'de Tam Metni Oku <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <button class="modal-secondary-btn" id="modal-cancel">Kapat</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
